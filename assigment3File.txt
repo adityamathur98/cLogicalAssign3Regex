@@ -1,0 +1,84 @@
+Q1) 	int i = 0;
+	i = i++ - --i + ++i - i--;
+	printf("%d\n", i);
+Ans) #include<stdio.h>
+	int main(){
+    	int i  = 0;
+    	i = i++ - --i + ++i - i--;
+    	printf("%d", i); //0
+    	return 0;
+	}
+
+Q2) int i = 1, j = 2, k = 3;
+	int m = i-- - j-- - k--;	
+Ans) #include<stdio.h>
+	int main(){
+    int i = 1, j = 2, k = 3;
+    int m = i-- - j-- - k--;
+    printf("i=%d\n",i); //0
+    printf("j=%d\n",j); //1
+    printf("k=%d\n",k); //2
+    printf("m=%d\n",m); //-4
+    return 0;
+}
+
+Q3) int a = 1, b = 2;
+	printf("%d", --b - ++a + ++b - --a);
+Ans. #include<stdio.h>
+int main(){
+    int a = 1, b = 2;
+    printf("Result %d", --b - ++a + ++b - --a);
+    return 0;
+}
+
+Q4) int i=19, j=29, k;
+	k = i-- - i++ + --j - ++j + --i - j-- + ++i - j++;
+	printf("i=%d\n", i);
+	printf("j=%d\n", j);
+	printf("k=%d\n", k);
+Ans. #include<stdio.h>
+	int main(){
+    int i = 19, j = 29, k;
+    k = i-- - i++ + --j - ++j + --i - j-- + ++i - j++;
+    printf("i%d\n", i); //19
+    printf("j%d\n",j); // 29
+    printf("k%d\n", k); //-20
+    return 0;
+}
+
+Q5) int i = 11;
+	int j = --(i++);
+Ans. This code snippet will throw an compilation error beacuse in C language we are not allowed to apply both pre-decrement 
+and post increment on the same variable with in the same expression.
+
+Q6) Guess the value of p
+	int m = 0, n = 0;
+	int p = --m * --n * n-- * m--;
+	printf("%i",p);	
+Ans. #include<stdio.h>
+	int main(){
+    int m = 0, n = 0;
+    int p = --m * --n * n-- * m--;
+    printf("%d",p); //1
+}
+
+Q7) int a=1;
+	a = a++ + ++a * --a - a--;
+	printf("%i",a);
+Ans. 3 But as per my result is coming as 5, I diccussed this issue with sir. It will be solved in next class.
+
+Q8) what will be the expected output of this program
+	int a = 11++;
+	printf("%i",a);
+Ans. It will throw a compilation error as we can't change the value of constant so The error will be 
+Compilation failed due to following error(s).main.c: In function ‘main’:
+main.c:3:15: error: lvalue required as increment operand
+    3 |     int a = 11++;
+
+Q9) int ch = 'A';
+	printf("%i",ch);
+Ans. 65
+
+Q10) 10) char c = 'A', C = 'a';
+	printf("%d\n", c++ * ++C);
+Ans  6370;
